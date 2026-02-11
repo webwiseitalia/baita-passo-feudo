@@ -1,3 +1,112 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Lato', sans-serif;
+    color: #4a2f1c;
+    background-color: #faf6f1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    font-family: 'Lato', sans-serif;
+    @apply inline-flex items-center justify-center px-8 py-3 rounded-full font-bold text-sm uppercase tracking-wider transition-all duration-300;
+  }
+  .btn-winter {
+    font-family: 'Lato', sans-serif;
+    @apply inline-flex items-center justify-center px-8 py-3 rounded-full font-bold text-sm uppercase tracking-wider transition-all duration-300 shadow-lg;
+    background-color: #1a6af5;
+    color: white;
+  }
+  .btn-winter:hover {
+    background-color: #1355e1;
+    @apply shadow-xl;
+  }
+  .btn-summer {
+    font-family: 'Lato', sans-serif;
+    @apply inline-flex items-center justify-center px-8 py-3 rounded-full font-bold text-sm uppercase tracking-wider transition-all duration-300 shadow-lg;
+    background-color: #16a34a;
+    color: white;
+  }
+  .btn-summer:hover {
+    background-color: #15803d;
+    @apply shadow-xl;
+  }
+  .btn-outline {
+    font-family: 'Lato', sans-serif;
+    @apply inline-flex items-center justify-center px-8 py-3 rounded-full font-bold text-sm uppercase tracking-wider transition-all duration-300 border-2 border-white text-white;
+  }
+  .btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .section-padding {
+    @apply py-16 px-4;
+  }
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+@media (min-width: 640px) {
+  .section-padding {
+    @apply px-6;
+  }
+}
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+@media (min-width: 1024px) {
+  .section-padding {
+    @apply px-8;
+  }
+}
+
+/* Hero parallax overlay */
+.hero-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.3) 0%,
+    rgba(0,0,0,0.1) 40%,
+    rgba(0,0,0,0.4) 100%
+  );
+}
+
+/* Season toggle animation */
+.season-toggle {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Smooth fade in */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-delay-100 { animation-delay: 0.1s; }
+.animate-delay-200 { animation-delay: 0.2s; }
+.animate-delay-300 { animation-delay: 0.3s; }
+.animate-delay-400 { animation-delay: 0.4s; }
