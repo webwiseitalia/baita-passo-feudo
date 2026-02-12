@@ -49,6 +49,10 @@ export default function LaBaita() {
         <img
           src={isWinter ? panoramaInverno : panoramaEstate}
           alt="Panorama dalla Baita Passo Feudo"
+          title="Panorama mozzafiato delle Dolomiti dalla Baita Passo Feudo"
+          loading="eager"
+          width={1920}
+          height={1080}
           className="hero-bg absolute inset-0 w-full h-full object-cover scale-110"
         />
         <div className="hero-overlay-left absolute inset-0" />
@@ -115,6 +119,10 @@ export default function LaBaita() {
                 <img
                   src={baitaEsterno}
                   alt="Baita Passo Feudo"
+                  title="Vista esterna della Baita Passo Feudo immersa nel paesaggio alpino"
+                  loading="lazy"
+                  width={800}
+                  height={600}
                   className="w-full h-full object-cover parallax-img scale-110"
                 />
               </div>
@@ -154,6 +162,10 @@ export default function LaBaita() {
                 <img
                   src={baitaInterno1}
                   alt="Interni in legno della Baita"
+                  title="Sala ristorante con rivestimenti in legno naturale"
+                  loading="lazy"
+                  width={800}
+                  height={500}
                   className="w-full h-full object-cover parallax-img scale-110"
                 />
               </div>
@@ -181,12 +193,12 @@ export default function LaBaita() {
           <div className="grid grid-cols-12 gap-3 mt-6 lg:-mt-20 pb-16 md:pb-28">
             <div className="col-span-5 md:col-span-3 md:col-start-3 rv-clip-up">
               <div className="overflow-hidden aspect-[3/4]">
-                <img src={baitaInterno2} alt="Dettaglio interni" className="w-full h-full object-cover parallax-img scale-110" />
+                <img src={baitaInterno2} alt="Dettaglio interni" title="Dettaglio degli interni rustici in legno della baita" loading="lazy" width={600} height={800} className="w-full h-full object-cover parallax-img scale-110" />
               </div>
             </div>
             <div className="col-span-7 md:col-span-4 md:col-start-6 md:mt-12 rv-clip-up">
               <div className="overflow-hidden aspect-[16/10]">
-                <img src={baitaInterno3} alt="Atmosfera accogliente" className="w-full h-full object-cover parallax-img scale-110" />
+                <img src={baitaInterno3} alt="Atmosfera accogliente" title="Atmosfera calda e accogliente degli interni della baita" loading="lazy" width={800} height={500} className="w-full h-full object-cover parallax-img scale-110" />
               </div>
             </div>
           </div>
@@ -203,6 +215,10 @@ export default function LaBaita() {
           <img
             src={terrazza}
             alt="Terrazza panoramica della Baita"
+            title="Terrazza solarium con vista sulle Dolomiti e le Pale di San Martino"
+            loading="lazy"
+            width={1920}
+            height={1080}
             className="w-full h-full object-cover parallax-img scale-110"
           />
         </div>
@@ -262,7 +278,7 @@ export default function LaBaita() {
           <div className="grid grid-cols-12 gap-3 md:gap-4">
             <div className="col-span-12 md:col-span-7 rv-clip-up">
               <div className="img-hover-shift overflow-hidden aspect-[16/10] cursor-explore group">
-                <img src={galleryImages[0].src} alt={galleryImages[0].alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+                <img src={galleryImages[0].src} alt={galleryImages[0].alt} title="Esterno della Baita Passo Feudo nel paesaggio montano" loading="lazy" width={800} height={500} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
               </div>
             </div>
             <div className="col-span-6 md:col-span-5 md:mt-12 rv-clip-right">

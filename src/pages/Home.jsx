@@ -74,6 +74,10 @@ export default function Home() {
           src={isWinter ? heroWinter : heroSummer}
           alt={isWinter ? 'Panorama invernale Dolomiti' : 'Panorama estivo Dolomiti'}
           className="hero-bg absolute inset-0 w-full h-full object-cover scale-110"
+          title="Vista panoramica delle Dolomiti dalla Baita Passo Feudo"
+          loading="eager"
+          width={1920}
+          height={1080}
         />
         <div className="hero-overlay absolute inset-0" />
 
@@ -166,7 +170,7 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
               <div className="lg:col-span-7 lg:col-start-1 lg:-ml-[4vw] rv-clip-up relative">
                 <div className="overflow-hidden aspect-[4/3] lg:aspect-[16/11]">
-                  <img src={foto3} alt="Esterno Baita" className="w-full h-full object-cover parallax-img scale-110" />
+                  <img src={foto3} alt="Esterno Baita" className="w-full h-full object-cover parallax-img scale-110" title="Esterno della Baita Passo Feudo con vista sulle montagne" loading="lazy" width={800} height={550} />
                 </div>
               </div>
 
@@ -188,7 +192,7 @@ export default function Home() {
         {/* Floating small image */}
         <div className="hidden lg:block absolute -bottom-20 right-[8%] z-30 rv-scale">
           <div className="w-44 h-56 overflow-hidden shadow-2xl" style={{ transform: 'rotate(3deg)' }}>
-            <img src={foto4} alt="Dettaglio baita" className="w-full h-full object-cover" />
+            <img src={foto4} alt="Dettaglio baita" className="w-full h-full object-cover" title="Dettaglio architettonico della baita alpina" loading="lazy" width={176} height={224} />
           </div>
         </div>
       </section>
@@ -201,12 +205,16 @@ export default function Home() {
               src={baitaInterior}
               alt="Interno Baita Passo Feudo"
               className="w-full h-full object-cover parallax-img scale-110"
+              title="Interno accogliente della Baita Passo Feudo rivestito in legno"
+              loading="lazy"
+              width={1920}
+              height={1080}
             />
           </div>
 
           <div className="lg:hidden px-6 mb-6 rv-clip-up">
             <div className="overflow-hidden aspect-[4/3]">
-              <img src={baitaInterior} alt="Interno Baita Passo Feudo" className="w-full h-full object-cover" />
+              <img src={baitaInterior} alt="Interno Baita Passo Feudo" className="w-full h-full object-cover" title="Interno della Baita Passo Feudo su dispositivo mobile" loading="lazy" width={800} height={600} />
             </div>
           </div>
 
@@ -234,7 +242,7 @@ export default function Home() {
 
               <div className="hidden lg:block mt-10 rv-up">
                 <div className="w-44 h-28 overflow-hidden" style={{ transform: 'rotate(-2deg)' }}>
-                  <img src={foto8} alt="Dettaglio interno" className="w-full h-full object-cover" />
+                  <img src={foto8} alt="Dettaglio interno" className="w-full h-full object-cover" title="Dettaglio degli interni in legno della baita" loading="lazy" width={176} height={112} />
                 </div>
               </div>
             </div>
@@ -275,7 +283,7 @@ export default function Home() {
         <div className="relative">
           {/* Wide background image — full width */}
           <div className="w-full h-[50vh] md:h-[65vh] rv-clip-up overflow-hidden">
-            <img src={piatto1} alt="Piatti del ristorante" className="w-full h-full object-cover parallax-img scale-110" />
+            <img src={piatto1} alt="Piatti del ristorante" className="w-full h-full object-cover parallax-img scale-110" title="Piatti tipici trentini serviti al ristorante della baita" loading="lazy" width={1920} height={1080} />
           </div>
           {/* Title block overlapping the image from bottom-left */}
           <div className="absolute bottom-0 left-0 z-10 bg-alpine-cream p-6 md:p-10 lg:p-14 max-w-lg lg:max-w-xl rv-up">

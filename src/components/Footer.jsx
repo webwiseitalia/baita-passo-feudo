@@ -30,7 +30,7 @@ export default function Footer() {
               </p>
             </div>
             <div className="lg:col-span-3 lg:col-start-10">
-              <img src={logo} alt="Baita Passo Feudo" className="h-14 brightness-0 invert opacity-50 mb-4" />
+              <img src={logo} alt="Baita Passo Feudo" title="Logo Baita Passo Feudo" loading="lazy" width={120} height={43} className="h-14 brightness-0 invert opacity-50 mb-4" />
               <p className="text-wood-500 text-sm leading-relaxed max-w-xs">
                 Una terrazza panoramica sulla Val di Fiemme, a pochi passi dagli impianti Latemar MontagnAnimata.
               </p>
@@ -130,16 +130,28 @@ export default function Footer() {
                 <img
                   src={fiemmeLogo}
                   alt="Val di Fiemme"
+                  title="Val di Fiemme"
+                  loading="lazy"
+                  width={100}
+                  height={32}
                   className="h-8 brightness-0 invert opacity-40 hover:opacity-80 transition-opacity"
                 />
                 <img
                   src={skiLatemrLogo}
                   alt="Ski Center Latemar"
+                  title="Ski Center Latemar"
+                  loading="lazy"
+                  width={100}
+                  height={32}
                   className="h-8 brightness-0 invert opacity-40 hover:opacity-80 transition-opacity"
                 />
                 <img
                   src={montagnanimataLogo}
                   alt="Latemar MontagnAnimata"
+                  title="Latemar MontagnAnimata"
+                  loading="lazy"
+                  width={100}
+                  height={32}
                   className="h-8 brightness-0 invert opacity-40 hover:opacity-80 transition-opacity"
                 />
               </div>
@@ -157,12 +169,12 @@ export default function Footer() {
             &copy; 2026 Baita Passo Feudo — Tutti i diritti riservati
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-xs text-wood-600 hover:text-white transition-colors font-accent tracking-wide">
+            <Link to="/privacy-policy" className="text-xs text-wood-600 hover:text-white transition-colors font-accent tracking-wide">
               Privacy Policy
-            </a>
-            <a href="#" className="text-xs text-wood-600 hover:text-white transition-colors font-accent tracking-wide">
+            </Link>
+            <Link to="/cookie-policy" className="text-xs text-wood-600 hover:text-white transition-colors font-accent tracking-wide">
               Cookie Policy
-            </a>
+            </Link>
           </div>
         </div>
       </div>

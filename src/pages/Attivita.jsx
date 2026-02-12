@@ -36,6 +36,10 @@ export default function Attivita() {
         <img
           src={isWinter ? winterHero : summerHero}
           alt={isWinter ? 'Attività invernali al Latemar' : 'Attività estive sulle Dolomiti'}
+          title={isWinter ? 'Panoramica delle attività invernali al Latemar' : 'Panoramica delle attività estive sulle Dolomiti'}
+          loading="eager"
+          width={1920}
+          height={1080}
           className="hero-bg absolute inset-0 w-full h-full object-cover scale-105"
         />
         <div className="hero-overlay absolute inset-0" />
@@ -114,6 +118,10 @@ export default function Attivita() {
                     <img
                       src={sci}
                       alt="Sci alpino sulle piste del Latemar"
+                      title="Sciatore sulle piste innevate dello Ski Center Latemar"
+                      loading="lazy"
+                      width={800}
+                      height={600}
                       className="w-full h-full object-cover parallax-img scale-110"
                     />
                   </div>
@@ -170,6 +178,10 @@ export default function Attivita() {
                     <img
                       src={sciAlpinismo}
                       alt="Sci alpinismo nelle Dolomiti"
+                      title="Sci alpinismo tra i paesaggi incontaminati delle Dolomiti"
+                      loading="lazy"
+                      width={800}
+                      height={600}
                       className="w-full h-full object-cover parallax-img scale-110"
                     />
                   </div>
@@ -193,6 +205,10 @@ export default function Attivita() {
                     <img
                       src={ciaspole}
                       alt="Ciaspolate tra le Dolomiti"
+                      title="Escursione con le ciaspole nei sentieri innevati del Latemar"
+                      loading="lazy"
+                      width={800}
+                      height={500}
                       className="w-full h-full object-cover parallax-img scale-110"
                     />
                   </div>
@@ -278,6 +294,10 @@ export default function Attivita() {
                     <img
                       src={escursioni}
                       alt="Escursioni estive nelle Dolomiti"
+                      title="Sentieri escursionistici tra pascoli e prati fioriti delle Dolomiti"
+                      loading="lazy"
+                      width={600}
+                      height={800}
                       className="w-full h-full object-cover parallax-img scale-110"
                     />
                   </div>
@@ -296,6 +316,10 @@ export default function Attivita() {
                     <img
                       src={bike}
                       alt="Mountain bike sui sentieri del Latemar"
+                      title="Mountain bike tra boschi di conifere e prati alpini del Latemar"
+                      loading="lazy"
+                      width={800}
+                      height={500}
                       className="w-full h-full object-cover parallax-img scale-110"
                     />
                   </div>
@@ -349,6 +373,10 @@ export default function Attivita() {
                     <img
                       src={panorama}
                       alt="Panorama mozzafiato sulle Dolomiti"
+                      title="Vista panoramica sulle Pale di San Martino e la Catena del Lagorai"
+                      loading="lazy"
+                      width={800}
+                      height={500}
                       className="w-full h-full object-cover parallax-img scale-110"
                     />
                   </div>

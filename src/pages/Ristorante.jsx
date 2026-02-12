@@ -38,6 +38,10 @@ export default function Ristorante() {
         <img
           src={heroRistorante}
           alt="Ristorante Baita Passo Feudo"
+          title="Ristorante Baita Passo Feudo in alta quota"
+          loading="eager"
+          width={1920}
+          height={1080}
           className="hero-bg absolute inset-0 w-full h-full object-cover scale-110"
         />
         <div className="hero-overlay absolute inset-0" />
@@ -102,6 +106,10 @@ export default function Ristorante() {
                 <img
                   src={cucina}
                   alt="Il nostro chef al lavoro"
+                  title="Lo chef della Baita Passo Feudo al lavoro in cucina"
+                  loading="lazy"
+                  width={800}
+                  height={600}
                   className="w-full h-full object-cover parallax-img scale-110"
                 />
               </div>
@@ -191,6 +199,10 @@ export default function Ristorante() {
                 <img
                   src={piatto1}
                   alt="Primi piatti"
+                  title="Primi piatti della tradizione trentina"
+                  loading="lazy"
+                  width={600}
+                  height={800}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
@@ -207,6 +219,10 @@ export default function Ristorante() {
                 <img
                   src={piatto3}
                   alt="Secondi piatti"
+                  title="Secondi piatti di selvaggina e polenta"
+                  loading="lazy"
+                  width={600}
+                  height={800}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
@@ -223,6 +239,10 @@ export default function Ristorante() {
                 <img
                   src={piatto2}
                   alt="Dolci e pizza"
+                  title="Dolci tipici e pizza dal forno a 2200 metri"
+                  loading="lazy"
+                  width={600}
+                  height={800}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />

@@ -50,6 +50,10 @@ export default function Header() {
             <img
               src={logo}
               alt="Baita Passo Feudo"
+              title="Logo Baita Passo Feudo"
+              loading="eager"
+              width={120}
+              height={43}
               className={`transition-all duration-500 ${scrolled ? 'h-8' : 'h-11'} ${
                 !scrolled && !menuOpen ? 'brightness-0 invert' : ''
               }`}
