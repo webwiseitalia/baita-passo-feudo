@@ -20,8 +20,8 @@ export default function Footer() {
       {/* ═══════════════════════════════════════
           BOLD DISPLAY HEADER — Visual anchor
           ═══════════════════════════════════════ */}
-      <div className="pt-20 md:pt-32 px-6 lg:px-12">
-        <div className="max-w-7xl mx-auto">
+      <div className="pt-20 md:pt-32 px-6 lg:px-16 2xl:px-24">
+        <div className="max-w-[1600px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
             <div className="lg:col-span-8">
               <p className="display-large text-white leading-[0.9]">
@@ -42,8 +42,8 @@ export default function Footer() {
       {/* ═══════════════════════════════════════
           CREATIVE RULE
           ═══════════════════════════════════════ */}
-      <div className="px-6 lg:px-12 mt-14 mb-14">
-        <div className="max-w-7xl mx-auto">
+      <div className="px-6 lg:px-16 2xl:px-24 mt-14 mb-14">
+        <div className="max-w-[1600px] mx-auto">
           <hr className="creative-rule opacity-30" />
         </div>
       </div>
@@ -51,8 +51,8 @@ export default function Footer() {
       {/* ═══════════════════════════════════════
           MAIN BODY — Asymmetric 12-col grid
           ═══════════════════════════════════════ */}
-      <div className="px-6 lg:px-12 pb-16">
-        <div className="max-w-7xl mx-auto">
+      <div className="px-6 lg:px-16 2xl:px-24 pb-16">
+        <div className="max-w-[1600px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-y-12 gap-x-8">
             {/* Navigation — narrow left column */}
             <div className="md:col-span-3 md:col-start-1">
@@ -152,7 +152,7 @@ export default function Footer() {
           BOTTOM BAR
           ═══════════════════════════════════════ */}
       <div className="border-t border-wood-800/50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-16 2xl:px-24 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <p className="text-xs text-wood-600">
             &copy; 2026 Baita Passo Feudo — Tutti i diritti riservati
           </p>

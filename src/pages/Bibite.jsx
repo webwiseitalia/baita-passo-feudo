@@ -67,16 +67,16 @@ const viniBottiglie = [
 export default function Bibite() {
   const { isWinter } = useSeason()
   const contentRef = useReveal()
-  const splitRef = useSplitText('.split-bibite-title', { types: 'chars', stagger: { each: 0.03 }, rotate: 3, duration: 1.1 })
+  const splitRef = useSplitText('.split-bibite-title', { types: 'chars', stagger: { each: 0.015 }, rotate: 3, duration: 0.55 })
 
   useEffect(() => {
     const heroEl = document.querySelector('.bibite-hero')
     if (!heroEl) return
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ delay: 0.3 })
-      tl.from('.hero-label', { y: 30, opacity: 0, duration: 1, ease: 'power3.out' })
-        .from('.hero-title-line', { y: 120, opacity: 0, duration: 1.4, stagger: 0.12, ease: 'power4.out' }, '-=0.5')
-        .from('.hero-vertical', { opacity: 0, x: 20, duration: 1, ease: 'power3.out' }, '-=0.6')
+      tl.from('.hero-label', { y: 30, opacity: 0, duration: 0.5, ease: 'power3.out' })
+        .from('.hero-title-line', { y: 120, opacity: 0, duration: 0.7, stagger: 0.06, ease: 'power4.out' }, '-=0.5')
+        .from('.hero-vertical', { opacity: 0, x: 20, duration: 0.5, ease: 'power3.out' }, '-=0.6')
     }, heroEl)
     return () => ctx.revert()
   }, [])
@@ -91,7 +91,7 @@ export default function Bibite() {
           HERO — Solid seasonal color, no image, asymmetric staggered title
           ═══════════════════════════════════════ */}
       <section
-        className={`bibite-hero relative pt-36 pb-24 md:pt-44 md:pb-32 px-6 lg:px-12 overflow-hidden ${
+        className={`bibite-hero relative pt-36 pb-24 md:pt-44 md:pb-32 px-6 lg:px-16 2xl:px-24 overflow-hidden ${
           isWinter ? 'bg-winter-800' : 'bg-summer-800'
         }`}
       >
@@ -105,7 +105,7 @@ export default function Bibite() {
           &
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="relative z-10 max-w-[1600px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
             <div className="lg:col-span-8 lg:col-start-1">
               <p className="hero-label label-upper text-white/35 mb-8">
@@ -133,8 +133,8 @@ export default function Bibite() {
       {/* ═══════════════════════════════════════
           CONTENT — Broken 12-col 2-column, offset right for asymmetry
           ═══════════════════════════════════════ */}
-      <section className="py-24 md:py-40 px-6 lg:px-12 bg-alpine-cream overflow-hidden">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-24 md:py-40 px-6 lg:px-16 2xl:px-24 bg-alpine-cream overflow-hidden">
+        <div className="max-w-[1600px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-8 lg:gap-x-16 gap-y-20">
 
             {/* LEFT COLUMN — Bibite & Birra */}
@@ -214,8 +214,8 @@ export default function Bibite() {
       {/* ═══════════════════════════════════════
           VINI IN BOTTIGLIA — Dark cinematic, 12-col broken grid
           ═══════════════════════════════════════ */}
-      <section className="py-28 md:py-40 px-6 lg:px-12 bg-alpine-dark text-white overflow-hidden">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-28 md:py-40 px-6 lg:px-16 2xl:px-24 bg-alpine-dark text-white overflow-hidden">
+        <div className="max-w-[1600px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0">
 
             {/* Title block — left, pushed down */}
@@ -269,8 +269,8 @@ export default function Bibite() {
       {/* ═══════════════════════════════════════
           CTA — Light, asymmetric with editorial quote
           ═══════════════════════════════════════ */}
-      <section className="py-24 md:py-36 px-6 lg:px-12 bg-alpine-cream overflow-hidden">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-24 md:py-36 px-6 lg:px-16 2xl:px-24 bg-alpine-cream overflow-hidden">
+        <div className="max-w-[1600px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             <div className="lg:col-span-5 lg:col-start-1">
               <p className={`rv-up label-upper mb-4 ${isWinter ? 'text-winter-500' : 'text-summer-500'}`}>

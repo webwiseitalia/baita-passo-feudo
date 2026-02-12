@@ -52,17 +52,17 @@ const caffetteriaMenu = [
 export default function Caffetteria() {
   const { isWinter } = useSeason()
   const contentRef = useReveal()
-  const splitRef = useSplitText('.split-caff-title', { types: 'chars', stagger: { each: 0.025 }, rotate: 4, duration: 1 })
+  const splitRef = useSplitText('.split-caff-title', { types: 'chars', stagger: { each: 0.0125 }, rotate: 4, duration: 0.5 })
 
   useEffect(() => {
     const heroEl = document.querySelector('.caff-hero')
     if (!heroEl) return
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ delay: 0.3 })
-      tl.from('.hero-label', { y: 20, opacity: 0, duration: 0.8, ease: 'power3.out' })
-        .from('.hero-title', { y: 100, opacity: 0, duration: 1.3, ease: 'power4.out' }, '-=0.3')
-        .from('.hero-sub', { y: 30, opacity: 0, duration: 1, ease: 'power3.out' }, '-=0.5')
-        .from('.hero-vertical', { opacity: 0, x: 20, duration: 1, ease: 'power3.out' }, '-=0.4')
+      tl.from('.hero-label', { y: 20, opacity: 0, duration: 0.4, ease: 'power3.out' })
+        .from('.hero-title', { y: 100, opacity: 0, duration: 0.65, ease: 'power4.out' }, '-=0.3')
+        .from('.hero-sub', { y: 30, opacity: 0, duration: 0.5, ease: 'power3.out' }, '-=0.5')
+        .from('.hero-vertical', { opacity: 0, x: 20, duration: 0.5, ease: 'power3.out' }, '-=0.4')
     }, heroEl)
     return () => ctx.revert()
   }, [])
@@ -81,7 +81,7 @@ export default function Caffetteria() {
       {/* ═══════════════════════════════════════
           HERO — Dark warm solid bg, no photo, asymmetric content
           ═══════════════════════════════════════ */}
-      <section className="caff-hero relative pt-36 pb-24 md:pt-44 md:pb-32 px-6 lg:px-12 overflow-hidden bg-wood-800">
+      <section className="caff-hero relative pt-36 pb-24 md:pt-44 md:pb-32 px-6 lg:px-16 2xl:px-24 overflow-hidden bg-wood-800">
         {/* Warm ambient glow */}
         <div className="absolute inset-0 opacity-[0.06]"
           style={{ backgroundImage: 'radial-gradient(ellipse at 70% 30%, rgba(255,180,80,0.4) 0%, transparent 55%)' }}
@@ -92,7 +92,7 @@ export default function Caffetteria() {
           C
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="relative z-10 max-w-[1600px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             <div className="lg:col-span-7 lg:col-start-1">
               <p className="hero-label label-upper text-white/35 mb-8">
@@ -144,8 +144,8 @@ export default function Caffetteria() {
       {/* ═══════════════════════════════════════
           MENU — Split 2-column, 12-col grid, offset for asymmetry
           ═══════════════════════════════════════ */}
-      <section className="py-24 md:py-40 px-6 lg:px-12 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-24 md:py-40 px-6 lg:px-16 2xl:px-24 bg-white overflow-hidden">
+        <div className="max-w-[1600px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0">
 
             {/* Left column — Caffetteria menu */}
@@ -224,8 +224,8 @@ export default function Caffetteria() {
       {/* ═══════════════════════════════════════
           GRAPPE & DIGESTIVI — Dark cinematic, 12-col broken grid
           ═══════════════════════════════════════ */}
-      <section className="py-28 md:py-40 px-6 lg:px-12 bg-alpine-dark text-white overflow-hidden">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-28 md:py-40 px-6 lg:px-16 2xl:px-24 bg-alpine-dark text-white overflow-hidden">
+        <div className="max-w-[1600px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0">
 
             {/* Title — left side, with description */}
@@ -269,8 +269,8 @@ export default function Caffetteria() {
       {/* ═══════════════════════════════════════
           CTA — Warm alpine-cream, asymmetric layout
           ═══════════════════════════════════════ */}
-      <section className="py-24 md:py-36 px-6 lg:px-12 bg-alpine-cream overflow-hidden">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-24 md:py-36 px-6 lg:px-16 2xl:px-24 bg-alpine-cream overflow-hidden">
+        <div className="max-w-[1600px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             <div className="lg:col-span-6 lg:col-start-1">
               <p className={`rv-up label-upper mb-4 ${isWinter ? 'text-winter-500' : 'text-summer-500'}`}>

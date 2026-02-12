@@ -154,14 +154,14 @@ export default function Menu() {
   const [activeCategory, setActiveCategory] = useState(null)
   const heroRef = useHeroParallax()
   const contentRef = useReveal([activeCategory])
-  const splitRef = useSplitText('.split-menu-title', { types: 'chars', stagger: { each: 0.02 }, rotate: 4, duration: 0.9 })
+  const splitRef = useSplitText('.split-menu-title', { types: 'chars', stagger: { each: 0.01 }, rotate: 4, duration: 0.45 })
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ delay: 0.2 })
-      tl.from('.hero-label', { y: 30, opacity: 0, duration: 1, ease: 'power3.out' })
-        .from('.hero-title-line', { y: 120, opacity: 0, duration: 1.4, stagger: 0.1, ease: 'power4.out' }, '-=0.5')
-        .from('.hero-sub', { y: 40, opacity: 0, duration: 1, ease: 'power3.out' }, '-=0.6')
+      tl.from('.hero-label', { y: 30, opacity: 0, duration: 0.5, ease: 'power3.out' })
+        .from('.hero-title-line', { y: 120, opacity: 0, duration: 0.7, stagger: 0.05, ease: 'power4.out' }, '-=0.5')
+        .from('.hero-sub', { y: 40, opacity: 0, duration: 0.5, ease: 'power3.out' }, '-=0.6')
     }, heroRef)
     return () => ctx.revert()
   }, [])
@@ -211,8 +211,8 @@ export default function Menu() {
         />
         <div className="hero-overlay absolute inset-0" />
 
-        <div className="relative z-10 w-full pb-14 md:pb-20 px-6 lg:px-12">
-          <div className="max-w-7xl mx-auto">
+        <div className="relative z-10 w-full pb-14 md:pb-20 px-6 lg:px-16 2xl:px-24">
+          <div className="max-w-[1600px] mx-auto">
             <div className="max-w-4xl">
               <p className="hero-label label-upper text-white/40 mb-6">
                 Cucina trentina creativa
@@ -241,7 +241,7 @@ export default function Menu() {
           FILTER NAV — Sticky, raw label-upper style
           ═══════════════════════════════════════ */}
       <section className="sticky top-[60px] z-30 bg-white/95 backdrop-blur-sm border-b border-wood-200/50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-4">
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-16 2xl:px-24 py-4">
           <div className="flex gap-5 md:gap-8 overflow-x-auto pb-1 scrollbar-hide">
             <button
               onClick={() => setActiveCategory(null)}
@@ -273,8 +273,8 @@ export default function Menu() {
       {/* ═══════════════════════════════════════
           MENU CONTENT — Broken grid, irregular spacing, varied section layouts
           ═══════════════════════════════════════ */}
-      <section className="py-16 md:py-24 px-6 lg:px-12 bg-alpine-cream overflow-hidden">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 md:py-24 px-6 lg:px-16 2xl:px-24 bg-alpine-cream overflow-hidden">
+        <div className="max-w-[1600px] mx-auto">
           {Object.entries(displayCategories).map(([key, category], idx) => {
             const layout = sectionLayouts[key] || 'compact'
             const sectionIdx = Object.keys(menuData).indexOf(key)
@@ -494,8 +494,8 @@ export default function Menu() {
       {/* ═══════════════════════════════════════
           CTA — Dark section, asymmetric grid
           ═══════════════════════════════════════ */}
-      <section className="py-20 md:py-32 px-6 lg:px-12 bg-alpine-dark overflow-hidden">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 md:py-32 px-6 lg:px-16 2xl:px-24 bg-alpine-dark overflow-hidden">
+        <div className="max-w-[1600px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
             <div className="lg:col-span-5 lg:col-start-1">
               <p className={`rv-up label-upper mb-4 ${isWinter ? 'text-winter-400' : 'text-summer-400'}`}>

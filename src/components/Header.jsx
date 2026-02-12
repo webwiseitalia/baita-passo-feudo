@@ -44,7 +44,7 @@ export default function Header() {
             : 'bg-transparent py-6'
         }`}
       >
-        <div className="flex items-center justify-between px-6 lg:px-12">
+        <div className="flex items-center justify-between px-6 lg:px-16 2xl:px-24">
           {/* Logo */}
           <Link to="/" className="shrink-0 relative z-50">
             <img

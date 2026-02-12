@@ -9,15 +9,15 @@ export default function Raggiungerci() {
   const { isWinter } = useSeason()
   const heroRef = useHeroParallax()
   const contentRef = useReveal()
-  const splitRef = useSplitText('.split-raggiungerci', { types: 'chars', stagger: { each: 0.02 }, rotate: 4, duration: 0.9 })
+  const splitRef = useSplitText('.split-raggiungerci', { types: 'chars', stagger: { each: 0.01 }, rotate: 4, duration: 0.45 })
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ delay: 0.2 })
-      tl.from('.hero-label-ragg', { y: 25, opacity: 0, duration: 0.9, ease: 'power3.out' })
-        .from('.hero-title-ragg', { y: 120, opacity: 0, duration: 1.4, stagger: 0.12, ease: 'power4.out' }, '-=0.4')
-        .from('.hero-sub-ragg', { x: -30, opacity: 0, duration: 1, ease: 'power3.out' }, '-=0.6')
-        .from('.hero-line-ragg', { scaleX: 0, duration: 1.2, ease: 'power2.inOut' }, '-=0.8')
+      tl.from('.hero-label-ragg', { y: 25, opacity: 0, duration: 0.45, ease: 'power3.out' })
+        .from('.hero-title-ragg', { y: 120, opacity: 0, duration: 0.7, stagger: 0.06, ease: 'power4.out' }, '-=0.4')
+        .from('.hero-sub-ragg', { x: -30, opacity: 0, duration: 0.5, ease: 'power3.out' }, '-=0.6')
+        .from('.hero-line-ragg', { scaleX: 0, duration: 0.6, ease: 'power2.inOut' }, '-=0.8')
     }, heroRef)
     return () => ctx.revert()
   }, [])
@@ -84,7 +84,7 @@ export default function Raggiungerci() {
           <span className="label-upper text-white/25 text-vertical text-xs">2.200 m s.l.m.</span>
         </div>
 
-        <div className="relative z-10 w-full pb-16 md:pb-24 px-6 lg:px-12">
+        <div className="relative z-10 w-full pb-16 md:pb-24 px-6 lg:px-16 2xl:px-24">
           <div className="max-w-6xl" ref={splitRef}>
             <p className="hero-label-ragg label-upper text-white/50 mb-4 tracking-[0.25em]">
               Da Predazzo · Val di Fiemme
@@ -110,13 +110,13 @@ export default function Raggiungerci() {
       {/* ═══════════════════════════════════════
           STEPS — Staggered diagonal cascade + tall image
           ═══════════════════════════════════════ */}
-      <section className="relative py-28 md:py-40 px-6 lg:px-12 bg-white overflow-hidden">
+      <section className="relative py-28 md:py-40 px-6 lg:px-16 2xl:px-24 bg-white overflow-hidden">
         {/* Decorative oversized number */}
         <div className="absolute -top-8 right-6 lg:right-12 text-[12rem] md:text-[20rem] font-heading text-wood-50 leading-none select-none pointer-events-none parallax-x" data-direction="right">
           30
         </div>
 
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-[1600px] mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0">
             {/* Text column — left side */}
             <div className="lg:col-span-5 lg:col-start-1">
@@ -169,8 +169,8 @@ export default function Raggiungerci() {
       {/* ═══════════════════════════════════════
           PREZZI IMPIANTI — Raw minimal table, no rounded corners
           ═══════════════════════════════════════ */}
-      <section className="py-24 md:py-36 px-6 lg:px-12 bg-alpine-cream overflow-hidden">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-24 md:py-36 px-6 lg:px-16 2xl:px-24 bg-alpine-cream overflow-hidden">
+        <div className="max-w-[1600px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             {/* Title — left aligned, pushed in */}
             <div className="lg:col-span-4 lg:col-start-2">
@@ -234,8 +234,8 @@ export default function Raggiungerci() {
       {/* ═══════════════════════════════════════
           A PIEDI — Dark section, trail E504
           ═══════════════════════════════════════ */}
-      <section className="py-28 md:py-40 px-6 lg:px-12 bg-alpine-dark text-white overflow-hidden">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-28 md:py-40 px-6 lg:px-16 2xl:px-24 bg-alpine-dark text-white overflow-hidden">
+        <div className="max-w-[1600px] mx-auto">
           {/* Section header — wide asymmetric */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-20">
             <div className="lg:col-span-5 lg:col-start-1">
@@ -302,8 +302,8 @@ export default function Raggiungerci() {
       {/* ═══════════════════════════════════════
           MAPPA — Overlapping layout with text + iframe
           ═══════════════════════════════════════ */}
-      <section className="py-24 md:py-36 px-6 lg:px-12 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-24 md:py-36 px-6 lg:px-16 2xl:px-24 bg-white overflow-hidden">
+        <div className="max-w-[1600px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-start">
             {/* Text — narrow left, sticky */}
             <div className="lg:col-span-4 lg:col-start-1 lg:sticky lg:top-32">

@@ -23,10 +23,10 @@ export function useReveal(deps = []) {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // rv-up — strong upward reveal, each with slightly different timing
+      // rv-up — snappy upward reveal
       gsap.utils.toArray('.rv-up').forEach((el, i) => {
-        const randomDelay = (i % 3) * 0.06
-        const randomDuration = 1.0 + (i % 4) * 0.15
+        const randomDelay = (i % 3) * 0.02
+        const randomDuration = 0.3 + (i % 4) * 0.04
         gsap.to(el, {
           y: 0,
           opacity: 1,
@@ -35,7 +35,7 @@ export function useReveal(deps = []) {
           ease: i % 2 === 0 ? EASE.snap : EASE.smooth,
           scrollTrigger: {
             trigger: el,
-            start: 'top 90%',
+            start: 'top 96%',
             toggleActions: 'play none none none',
           },
         })
@@ -46,11 +46,11 @@ export function useReveal(deps = []) {
         gsap.to(el, {
           y: 0,
           opacity: 1,
-          duration: 1.4,
+          duration: 0.4,
           ease: EASE.smooth,
           scrollTrigger: {
             trigger: el,
-            start: 'top 92%',
+            start: 'top 96%',
             toggleActions: 'play none none none',
           },
         })
@@ -61,11 +61,11 @@ export function useReveal(deps = []) {
         gsap.to(el, {
           x: 0,
           opacity: 1,
-          duration: 1.6,
+          duration: 0.45,
           ease: EASE.snap,
           scrollTrigger: {
             trigger: el,
-            start: 'top 85%',
+            start: 'top 95%',
             toggleActions: 'play none none none',
           },
         })
@@ -76,11 +76,11 @@ export function useReveal(deps = []) {
         gsap.to(el, {
           x: 0,
           opacity: 1,
-          duration: 1.6,
+          duration: 0.45,
           ease: EASE.snap,
           scrollTrigger: {
             trigger: el,
-            start: 'top 85%',
+            start: 'top 95%',
             toggleActions: 'play none none none',
           },
         })
@@ -91,11 +91,11 @@ export function useReveal(deps = []) {
         gsap.to(el, {
           scale: 1,
           opacity: 1,
-          duration: 1.8,
+          duration: 0.45,
           ease: EASE.smooth,
           scrollTrigger: {
             trigger: el,
-            start: 'top 88%',
+            start: 'top 95%',
             toggleActions: 'play none none none',
           },
         })
@@ -107,25 +107,25 @@ export function useReveal(deps = []) {
           rotate: 0,
           y: 0,
           opacity: 1,
-          duration: 1.4,
+          duration: 0.4,
           ease: EASE.snap,
           scrollTrigger: {
             trigger: el,
-            start: 'top 88%',
+            start: 'top 95%',
             toggleActions: 'play none none none',
           },
         })
       })
 
-      // Clip-path reveals
+      // Clip-path reveals — fast and responsive
       gsap.utils.toArray('.rv-clip-up').forEach((el) => {
         gsap.to(el, {
           clipPath: 'inset(0 0 0 0)',
-          duration: 1.6,
+          duration: 0.5,
           ease: EASE.slowMo,
           scrollTrigger: {
             trigger: el,
-            start: 'top 82%',
+            start: 'top 95%',
             toggleActions: 'play none none none',
           },
         })
@@ -134,11 +134,11 @@ export function useReveal(deps = []) {
       gsap.utils.toArray('.rv-clip-left').forEach((el) => {
         gsap.to(el, {
           clipPath: 'inset(0 0 0 0)',
-          duration: 1.4,
+          duration: 0.45,
           ease: EASE.slowMo,
           scrollTrigger: {
             trigger: el,
-            start: 'top 85%',
+            start: 'top 95%',
             toggleActions: 'play none none none',
           },
         })
@@ -147,11 +147,11 @@ export function useReveal(deps = []) {
       gsap.utils.toArray('.rv-clip-right').forEach((el) => {
         gsap.to(el, {
           clipPath: 'inset(0 0 0 0)',
-          duration: 1.4,
+          duration: 0.45,
           ease: EASE.slowMo,
           scrollTrigger: {
             trigger: el,
-            start: 'top 85%',
+            start: 'top 95%',
             toggleActions: 'play none none none',
           },
         })
@@ -160,11 +160,11 @@ export function useReveal(deps = []) {
       gsap.utils.toArray('.rv-clip-center').forEach((el) => {
         gsap.to(el, {
           clipPath: 'inset(0 0 0 0)',
-          duration: 1.8,
+          duration: 0.5,
           ease: EASE.slowMo,
           scrollTrigger: {
             trigger: el,
-            start: 'top 85%',
+            start: 'top 95%',
             toggleActions: 'play none none none',
           },
         })
@@ -180,7 +180,7 @@ export function useReveal(deps = []) {
             trigger: el.parentElement,
             start: 'top bottom',
             end: 'bottom top',
-            scrub: 1 + (i % 3) * 0.5,
+            scrub: 0.6 + (i % 3) * 0.2,
           },
         })
       })
@@ -195,7 +195,7 @@ export function useReveal(deps = []) {
             trigger: el.parentElement || el,
             start: 'top bottom',
             end: 'bottom top',
-            scrub: 2,
+            scrub: 1,
           },
         })
       })
@@ -209,7 +209,7 @@ export function useReveal(deps = []) {
             trigger: el,
             start: 'top bottom',
             end: 'bottom top',
-            scrub: 2,
+            scrub: 1,
           },
         })
       })
@@ -241,7 +241,7 @@ export function useHeroParallax() {
           trigger: heroRef.current,
           start: 'top top',
           end: 'bottom top',
-          scrub: 1,
+          scrub: 0.6,
         },
       })
     }, heroRef)
@@ -280,12 +280,12 @@ export function useSplitText(selector, options = {}) {
           y: options.y ?? '100%',
           opacity: 0,
           rotate: options.rotate ?? 5,
-          duration: options.duration ?? 0.8,
-          stagger: options.stagger ?? { each: 0.03, from: 'start' },
+          duration: options.duration ? options.duration * 0.55 : 0.4,
+          stagger: options.stagger ?? { each: 0.015, from: 'start' },
           ease: options.ease ?? EASE.snap,
           scrollTrigger: options.scrollTrigger ?? {
             trigger: el,
-            start: options.start ?? 'top 85%',
+            start: options.start ?? 'top 88%',
             toggleActions: 'play none none none',
           },
         })
@@ -315,12 +315,12 @@ export function useStagger(selector, options = {}) {
       gsap.from(elements, {
         y: options.y ?? 60,
         opacity: 0,
-        duration: options.duration ?? 1,
-        stagger: options.stagger ?? { each: 0.12, from: 'start' },
+        duration: options.duration ?? 0.5,
+        stagger: options.stagger ?? { each: 0.06, from: 'start' },
         ease: options.ease ?? EASE.smooth,
         scrollTrigger: {
           trigger: ref.current,
-          start: options.start ?? 'top 80%',
+          start: options.start ?? 'top 85%',
           toggleActions: 'play none none none',
         },
       })
@@ -348,7 +348,7 @@ export function useScrollProgress() {
           trigger: document.documentElement,
           start: 'top top',
           end: 'bottom bottom',
-          scrub: 0.3,
+          scrub: 0.2,
         },
       })
     })

@@ -13,15 +13,15 @@ export default function Ristorante() {
   const { isWinter } = useSeason()
   const heroRef = useHeroParallax()
   const contentRef = useReveal()
-  const splitRef = useSplitText('.split-ristorante-title', { types: 'chars', stagger: { each: 0.03 }, rotate: 5, duration: 1 })
+  const splitRef = useSplitText('.split-ristorante-title', { types: 'chars', stagger: { each: 0.015 }, rotate: 5, duration: 0.5 })
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ delay: 0.2 })
-      tl.from('.hero-badge-rist', { scale: 0.6, opacity: 0, duration: 1, ease: 'elastic.out(1, 0.6)' })
-        .from('.hero-label-rist', { y: 25, opacity: 0, duration: 0.9, ease: 'power3.out' }, '-=0.5')
-        .from('.hero-title-rist', { y: 100, opacity: 0, duration: 1.4, ease: 'power4.out' }, '-=0.4')
-        .from('.hero-sub-rist', { y: 40, opacity: 0, duration: 1, ease: 'power3.out' }, '-=0.5')
+      tl.from('.hero-badge-rist', { scale: 0.6, opacity: 0, duration: 0.5, ease: 'elastic.out(1, 0.6)' })
+        .from('.hero-label-rist', { y: 25, opacity: 0, duration: 0.45, ease: 'power3.out' }, '-=0.5')
+        .from('.hero-title-rist', { y: 100, opacity: 0, duration: 0.7, ease: 'power4.out' }, '-=0.4')
+        .from('.hero-sub-rist', { y: 40, opacity: 0, duration: 0.5, ease: 'power3.out' }, '-=0.5')
     }, heroRef)
     return () => ctx.revert()
   }, [])
@@ -42,7 +42,7 @@ export default function Ristorante() {
         />
         <div className="hero-overlay absolute inset-0" />
 
-        <div className="relative z-10 w-full pb-14 md:pb-24 px-6 lg:px-12">
+        <div className="relative z-10 w-full pb-14 md:pb-24 px-6 lg:px-16 2xl:px-24">
           <div className="max-w-5xl">
             <p className="hero-label-rist label-upper text-white/40 mb-5 tracking-[0.25em]">
               Cucina trentina · 2.200m
@@ -73,8 +73,8 @@ export default function Ristorante() {
           as separate element below-left. Opposite direction from
           typical right-overlap patterns.
           ═══════════════════════════════════════ */}
-      <section className="py-28 md:py-40 px-6 lg:px-12 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-28 md:py-40 px-6 lg:px-16 2xl:px-24 bg-white overflow-hidden">
+        <div className="max-w-[1600px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-0 items-center" ref={splitRef}>
             {/* Text panel — left, overlapping into image zone */}
             <div className="lg:col-span-5 lg:col-start-1 lg:-mr-16 relative z-10 order-2 lg:order-1">
@@ -126,8 +126,8 @@ export default function Ristorante() {
           offsets, irregular column positions. NOT aligned, NOT in a row.
           Each tag drifts independently.
           ═══════════════════════════════════════ */}
-      <section className="py-20 md:py-32 px-6 lg:px-12 bg-alpine-cream overflow-hidden">
-        <div className="max-w-7xl mx-auto relative">
+      <section className="py-20 md:py-32 px-6 lg:px-16 2xl:px-24 bg-alpine-cream overflow-hidden">
+        <div className="max-w-[1600px] mx-auto relative">
           {/* Decorative large text behind */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[8rem] md:text-[14rem] font-heading text-wood-100 leading-none select-none pointer-events-none whitespace-nowrap opacity-40">
             qualità
@@ -164,8 +164,8 @@ export default function Ristorante() {
           and column spans. NOT equal columns. Staggered vertically
           with gradient overlays and floating text labels.
           ═══════════════════════════════════════ */}
-      <section className="py-28 md:py-40 px-6 lg:px-12 bg-alpine-dark text-white overflow-hidden">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-28 md:py-40 px-6 lg:px-16 2xl:px-24 bg-alpine-dark text-white overflow-hidden">
+        <div className="max-w-[1600px] mx-auto">
           {/* Header — title far left, description pushed far right */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-0 mb-16 lg:mb-24 items-end">
             <div className="lg:col-span-4 lg:col-start-1">
@@ -241,13 +241,13 @@ export default function Ristorante() {
           on left, description + buttons offset right. Decorative
           line and altitude marker.
           ═══════════════════════════════════════ */}
-      <section className={`relative py-28 md:py-40 px-6 lg:px-12 ${isWinter ? 'bg-winter-600' : 'bg-summer-600'} text-white overflow-hidden`}>
+      <section className={`relative py-28 md:py-40 px-6 lg:px-16 2xl:px-24 ${isWinter ? 'bg-winter-600' : 'bg-summer-600'} text-white overflow-hidden`}>
         {/* Decorative oversized text behind */}
         <div className="absolute -bottom-8 -right-4 text-[10rem] md:text-[18rem] font-heading text-white/5 leading-none select-none pointer-events-none">
           MENU
         </div>
 
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-[1600px] mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-start">
             {/* Title — left, massive */}
             <div className="lg:col-span-5 lg:col-start-1">

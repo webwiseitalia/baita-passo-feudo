@@ -8,15 +8,15 @@ export default function Contatti() {
   const { isWinter } = useSeason()
   const heroRef = useHeroParallax()
   const contentRef = useReveal()
-  const splitRef = useSplitText('.split-contatti', { types: 'chars', stagger: { each: 0.03 }, rotate: 3, duration: 1 })
+  const splitRef = useSplitText('.split-contatti', { types: 'chars', stagger: { each: 0.015 }, rotate: 3, duration: 0.5 })
   const [formData, setFormData] = useState({ nome: '', email: '', messaggio: '' })
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ delay: 0.2 })
-      tl.from('.hero-label-cont', { y: 25, opacity: 0, duration: 0.9, ease: 'power3.out' })
-        .from('.hero-title-cont', { y: 100, opacity: 0, duration: 1.3, ease: 'power4.out' }, '-=0.3')
-        .from('.hero-line-cont', { scaleX: 0, duration: 1.2, ease: 'power2.inOut' }, '-=0.7')
+      tl.from('.hero-label-cont', { y: 25, opacity: 0, duration: 0.45, ease: 'power3.out' })
+        .from('.hero-title-cont', { y: 100, opacity: 0, duration: 0.65, ease: 'power4.out' }, '-=0.3')
+        .from('.hero-line-cont', { scaleX: 0, duration: 0.6, ease: 'power2.inOut' }, '-=0.7')
     }, heroRef)
     return () => ctx.revert()
   }, [])
@@ -47,7 +47,7 @@ export default function Contatti() {
           <span className="label-upper text-white/20 text-vertical text-xs">Contatti</span>
         </div>
 
-        <div className="relative z-10 w-full pb-16 md:pb-24 px-6 lg:px-12">
+        <div className="relative z-10 w-full pb-16 md:pb-24 px-6 lg:px-16 2xl:px-24">
           <div className="max-w-6xl" ref={splitRef}>
             <p className="hero-label-cont label-upper text-white/50 mb-4 tracking-[0.25em]">
               Siamo qui per voi
@@ -62,13 +62,13 @@ export default function Contatti() {
       {/* ═══════════════════════════════════════
           CONTACT INFO + FORM — Asymmetric broken grid
           ═══════════════════════════════════════ */}
-      <section className="relative py-28 md:py-40 px-6 lg:px-12 bg-white overflow-hidden">
+      <section className="relative py-28 md:py-40 px-6 lg:px-16 2xl:px-24 bg-white overflow-hidden">
         {/* Decorative element */}
         <div className="absolute -bottom-12 -left-8 text-[14rem] md:text-[22rem] font-heading text-wood-50 leading-none select-none pointer-events-none opacity-40">
           @
         </div>
 
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-[1600px] mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
 
             {/* LEFT — Contact info, irregular spacing */}
@@ -199,7 +199,7 @@ export default function Contatti() {
           MAP — Full-width at bottom with asymmetric header
           ═══════════════════════════════════════ */}
       <section className="bg-alpine-cream">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-20 pb-6">
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-16 2xl:px-24 pt-20 pb-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-10">
             <div className="lg:col-span-4">
               <h2 className="rv-up display-medium text-alpine-dark">

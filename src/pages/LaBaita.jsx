@@ -16,15 +16,15 @@ export default function LaBaita() {
   const { isWinter } = useSeason()
   const heroRef = useHeroParallax()
   const contentRef = useReveal()
-  const splitRef = useSplitText('.split-baita-headline', { types: 'chars', stagger: { each: 0.025 }, rotate: 4, duration: 0.9 })
+  const splitRef = useSplitText('.split-baita-headline', { types: 'chars', stagger: { each: 0.0125 }, rotate: 4, duration: 0.45 })
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ delay: 0.3 })
-      tl.from('.hero-label-baita', { y: 20, opacity: 0, duration: 0.8, ease: 'power3.out' })
-        .from('.hero-title-baita', { y: 120, opacity: 0, duration: 1.4, ease: 'power4.out' }, '-=0.3')
-        .from('.hero-sub-baita', { x: -40, opacity: 0, duration: 1, ease: 'power3.out' }, '-=0.6')
-        .from('.hero-line-baita', { scaleX: 0, duration: 1.2, ease: 'power2.inOut' }, '-=0.8')
+      tl.from('.hero-label-baita', { y: 20, opacity: 0, duration: 0.4, ease: 'power3.out' })
+        .from('.hero-title-baita', { y: 120, opacity: 0, duration: 0.7, ease: 'power4.out' }, '-=0.3')
+        .from('.hero-sub-baita', { x: -40, opacity: 0, duration: 0.5, ease: 'power3.out' }, '-=0.6')
+        .from('.hero-line-baita', { scaleX: 0, duration: 0.6, ease: 'power2.inOut' }, '-=0.8')
     }, heroRef)
     return () => ctx.revert()
   }, [])
@@ -59,7 +59,7 @@ export default function LaBaita() {
           <span className="label-upper text-white/25 text-vertical text-xs">2.200 m s.l.m.</span>
         </div>
 
-        <div className="relative z-10 w-full pb-14 md:pb-20 px-6 lg:px-12">
+        <div className="relative z-10 w-full pb-14 md:pb-20 px-6 lg:px-16 2xl:px-24">
           <div className="max-w-6xl">
             <p className="hero-label-baita label-upper text-white/40 mb-5 tracking-[0.3em]">
               Rifugio alpino · 2.200m
@@ -81,13 +81,13 @@ export default function LaBaita() {
           INTRO — Broken grid: narrow text col-1-4, image col-5-12 bleeding right,
           quote floating below with offset. Totally asymmetric.
           ═══════════════════════════════════════ */}
-      <section className="relative py-28 md:py-44 px-6 lg:px-12 bg-alpine-cream overflow-hidden">
+      <section className="relative py-28 md:py-44 px-6 lg:px-16 2xl:px-24 bg-alpine-cream overflow-hidden">
         {/* Decorative oversized number */}
         <div className="absolute -top-8 left-6 lg:left-12 text-[14rem] md:text-[22rem] font-heading text-wood-100 leading-none select-none pointer-events-none opacity-50 parallax-x" data-direction="right">
           01
         </div>
 
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-[1600px] mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-0" ref={splitRef}>
             {/* Text — narrow left column, pushed down */}
             <div className="lg:col-span-4 lg:col-start-1 lg:pt-16">
@@ -138,8 +138,8 @@ export default function LaBaita() {
           structure from intro (image is wider, text overlaps from RIGHT side
           and is positioned higher, not lower).
           ═══════════════════════════════════════ */}
-      <section className="py-20 md:py-0 px-6 lg:px-12 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 md:py-0 px-6 lg:px-16 2xl:px-24 bg-white overflow-hidden">
+        <div className="max-w-[1600px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-0 items-start min-h-[80vh]">
             {/* Vertical label — thin col */}
             <div className="hidden lg:flex lg:col-span-1 lg:col-start-1 items-start justify-center pt-32">
@@ -208,8 +208,8 @@ export default function LaBaita() {
         </div>
         <div className="absolute inset-0 bg-black/35" />
 
-        <div className="relative z-10 w-full px-6 lg:px-12">
-          <div className="max-w-7xl mx-auto">
+        <div className="relative z-10 w-full px-6 lg:px-16 2xl:px-24">
+          <div className="max-w-[1600px] mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
               {/* Title — left, pushed down */}
               <div className="lg:col-span-5 lg:col-start-1 lg:pt-16">
@@ -245,8 +245,8 @@ export default function LaBaita() {
           vertical offsets. NO regular pattern. Some images tall, some
           wide, some square. Varied aspect ratios.
           ═══════════════════════════════════════ */}
-      <section className="py-24 md:py-36 px-6 lg:px-12 bg-alpine-cream overflow-hidden">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-24 md:py-36 px-6 lg:px-16 2xl:px-24 bg-alpine-cream overflow-hidden">
+        <div className="max-w-[1600px] mx-auto">
           {/* Header — title left, decorative line right */}
           <div className="grid grid-cols-12 gap-4 mb-14 lg:mb-20 items-end">
             <div className="col-span-8 md:col-span-4">

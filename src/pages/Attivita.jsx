@@ -15,14 +15,14 @@ export default function Attivita() {
   const { isWinter, isSummer } = useSeason()
   const heroRef = useHeroParallax()
   const contentRef = useReveal()
-  const splitRef = useSplitText('.split-attivita', { types: 'chars', stagger: { each: 0.02 }, rotate: 3, duration: 0.9 })
+  const splitRef = useSplitText('.split-attivita', { types: 'chars', stagger: { each: 0.01 }, rotate: 3, duration: 0.45 })
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ delay: 0.2 })
-      tl.from('.hero-label-att', { y: 25, opacity: 0, duration: 0.9, ease: 'power3.out' })
-        .from('.hero-title-line-att', { y: 130, opacity: 0, duration: 1.5, stagger: 0.14, ease: 'power4.out' }, '-=0.4')
-        .from('.hero-vertical-att', { opacity: 0, y: 15, duration: 1, ease: 'power3.out' }, '-=0.6')
+      tl.from('.hero-label-att', { y: 25, opacity: 0, duration: 0.45, ease: 'power3.out' })
+        .from('.hero-title-line-att', { y: 130, opacity: 0, duration: 0.75, stagger: 0.07, ease: 'power4.out' }, '-=0.4')
+        .from('.hero-vertical-att', { opacity: 0, y: 15, duration: 0.5, ease: 'power3.out' }, '-=0.6')
     }, heroRef)
     return () => ctx.revert()
   }, [])
@@ -40,7 +40,7 @@ export default function Attivita() {
         />
         <div className="hero-overlay absolute inset-0" />
 
-        <div className="relative z-10 w-full pb-16 md:pb-24 px-6 lg:px-12">
+        <div className="relative z-10 w-full pb-16 md:pb-24 px-6 lg:px-16 2xl:px-24">
           <div className="max-w-6xl">
             <p className="hero-label-att label-upper text-white/50 mb-6 tracking-[0.25em]">
               {isWinter ? 'Inverno · Ski Center Latemar' : 'Estate · Dolomiti UNESCO'}
@@ -65,13 +65,13 @@ export default function Attivita() {
       {/* ═══════════════════════════════════════
           INTRO — Asymmetric text, pushed right with decorative element
           ═══════════════════════════════════════ */}
-      <section className="relative py-24 md:py-36 px-6 lg:px-12 bg-white overflow-hidden">
+      <section className="relative py-24 md:py-36 px-6 lg:px-16 2xl:px-24 bg-white overflow-hidden">
         {/* Decorative oversized glyph */}
         <div className="absolute top-6 right-8 lg:right-16 text-[10rem] md:text-[16rem] font-heading text-wood-50 leading-none select-none pointer-events-none parallax-x" data-direction="right">
           ✦
         </div>
 
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-[1600px] mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             <div className="lg:col-span-2 lg:col-start-1 hidden lg:flex items-start pt-4">
               <span className={`rv-rotate text-vertical label-upper ${isWinter ? 'text-winter-300' : 'text-summer-300'}`}>
@@ -100,8 +100,8 @@ export default function Attivita() {
       {isWinter && (
         <>
           {/* ─── SCI ALPINO — Image left (7 cols) overlapped by text-right panel ─── */}
-          <section className="py-24 md:py-36 px-6 lg:px-12 bg-alpine-cream overflow-hidden">
-            <div className="max-w-7xl mx-auto relative">
+          <section className="py-24 md:py-36 px-6 lg:px-16 2xl:px-24 bg-alpine-cream overflow-hidden">
+            <div className="max-w-[1600px] mx-auto relative">
               {/* Decorative number */}
               <div className="absolute -top-4 left-0 text-[12rem] md:text-[18rem] font-heading text-wood-100 leading-none select-none pointer-events-none opacity-50">
                 01
@@ -138,8 +138,8 @@ export default function Attivita() {
           </section>
 
           {/* ─── SCI ALPINISMO — Text-left panel overlapping into image-right, reversed structure ─── */}
-          <section className="py-16 md:py-0 px-6 lg:px-12 bg-white overflow-hidden">
-            <div className="max-w-7xl mx-auto">
+          <section className="py-16 md:py-0 px-6 lg:px-16 2xl:px-24 bg-white overflow-hidden">
+            <div className="max-w-[1600px] mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-0 items-start min-h-[80vh]">
                 {/* Vertical accent */}
                 <div className="hidden lg:flex lg:col-span-1 lg:col-start-1 items-start justify-center pt-40">
@@ -179,13 +179,13 @@ export default function Attivita() {
           </section>
 
           {/* ─── CIASPOLE — Dark section, cinematic wide image with floating text card ─── */}
-          <section className="relative py-28 md:py-40 px-6 lg:px-12 bg-alpine-dark overflow-hidden">
+          <section className="relative py-28 md:py-40 px-6 lg:px-16 2xl:px-24 bg-alpine-dark overflow-hidden">
             {/* Decorative number */}
             <div className="absolute top-8 right-8 lg:right-16 text-[10rem] md:text-[16rem] font-heading text-white/[0.03] leading-none select-none pointer-events-none">
               03
             </div>
 
-            <div className="max-w-7xl mx-auto relative z-10">
+            <div className="max-w-[1600px] mx-auto relative z-10">
               {/* Wide image — cinematic aspect ratio */}
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-end">
                 <div className="lg:col-span-9 lg:col-start-1 rv-clip-up">
@@ -227,13 +227,13 @@ export default function Attivita() {
       {isSummer && (
         <>
           {/* ─── ESCURSIONI — Text-left with trail list, wide image right bleeding ─── */}
-          <section className="relative py-28 md:py-44 px-6 lg:px-12 bg-alpine-cream overflow-hidden">
+          <section className="relative py-28 md:py-44 px-6 lg:px-16 2xl:px-24 bg-alpine-cream overflow-hidden">
             {/* Oversized decorative marker */}
             <div className="absolute -top-4 right-6 lg:right-12 text-[12rem] md:text-[20rem] font-heading text-wood-100 leading-none select-none pointer-events-none opacity-40 parallax-x" data-direction="right">
               01
             </div>
 
-            <div className="max-w-7xl mx-auto relative z-10">
+            <div className="max-w-[1600px] mx-auto relative z-10">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-0 items-start">
                 {/* Text — narrow left column */}
                 <div className="lg:col-span-5 lg:col-start-1 lg:pr-8 order-2 lg:order-1 lg:pt-8">
@@ -287,8 +287,8 @@ export default function Attivita() {
           </section>
 
           {/* ─── MOUNTAIN BIKE — Image left overlapped by text-right, different from winter pattern ─── */}
-          <section className="py-24 md:py-36 px-6 lg:px-12 bg-white overflow-hidden">
-            <div className="max-w-7xl mx-auto relative">
+          <section className="py-24 md:py-36 px-6 lg:px-16 2xl:px-24 bg-white overflow-hidden">
+            <div className="max-w-[1600px] mx-auto relative">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-0 items-center">
                 {/* Image — spans 7 columns, cinematic ratio */}
                 <div className="lg:col-span-7 lg:col-start-1 rv-clip-up">
@@ -320,12 +320,12 @@ export default function Attivita() {
           </section>
 
           {/* ─── PANORAMI — Dark section, text-left with wide cinematic image ─── */}
-          <section className="relative py-28 md:py-40 px-6 lg:px-12 bg-alpine-dark overflow-hidden">
+          <section className="relative py-28 md:py-40 px-6 lg:px-16 2xl:px-24 bg-alpine-dark overflow-hidden">
             <div className="absolute top-12 left-8 lg:left-16 text-[10rem] md:text-[15rem] font-heading text-white/[0.03] leading-none select-none pointer-events-none">
               03
             </div>
 
-            <div className="max-w-7xl mx-auto relative z-10">
+            <div className="max-w-[1600px] mx-auto relative z-10">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-end">
                 {/* Text — left narrow col, pushed down to align with image bottom */}
                 <div className="lg:col-span-4 lg:col-start-1 lg:pb-8">
