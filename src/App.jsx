@@ -1,5 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import { SeasonProvider } from './context/SeasonContext'
+import { useLenis } from './hooks/useLenis'
+import { useScrollProgress } from './hooks/useGsap'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
@@ -15,12 +17,16 @@ import Raggiungerci from './pages/Raggiungerci'
 import Contatti from './pages/Contatti'
 
 export default function App() {
+  useLenis()
+  useScrollProgress()
+
   return (
     <SeasonProvider>
       <ScrollToTop />
-      <div className="min-h-screen flex flex-col">
+      <div className="scroll-progress" />
+      <div className="grain">
         <Header />
-        <main className="flex-1">
+        <main>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/la-baita" element={<LaBaita />} />

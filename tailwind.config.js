@@ -54,6 +54,14 @@ export default {
       fontFamily: {
         heading: ['Playfair Display', 'serif'],
         body: ['Lato', 'sans-serif'],
+        accent: ['Space Grotesk', 'sans-serif'],
+      },
+      spacing: {
+        '18': '4.5rem',
+        '22': '5.5rem',
+        '30': '7.5rem',
+        '34': '8.5rem',
+        '38': '9.5rem',
       },
     },
   },
