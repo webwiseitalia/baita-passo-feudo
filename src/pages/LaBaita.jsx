@@ -283,41 +283,41 @@ export default function LaBaita() {
             </div>
             <div className="col-span-6 md:col-span-5 md:mt-12 rv-clip-right">
               <div className="img-hover-zoom overflow-hidden aspect-[3/4] cursor-explore group">
-                <img src={galleryImages[1].src} alt={galleryImages[1].alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+                <img src={galleryImages[1].src} alt={galleryImages[1].alt} title="Sala ristorante in legno con arredi tradizionali" loading="lazy" width={600} height={800} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
               </div>
             </div>
 
             {/* Row 2 — three unequal: narrow tall (3 cols), wide short (5 cols, pushed down), medium (4 cols, pulled up) */}
             <div className="col-span-6 md:col-span-3 md:-mt-8 rv-scale">
               <div className="overflow-hidden aspect-[3/5] cursor-explore group">
-                <img src={galleryImages[2].src} alt={galleryImages[2].alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+                <img src={galleryImages[2].src} alt={galleryImages[2].alt} title="Dettaglio degli interni e dell'arredamento della baita" loading="lazy" width={600} height={1000} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
               </div>
             </div>
             <div className="col-span-6 md:col-span-5 md:mt-16 rv-clip-up">
               <div className="img-hover-shift overflow-hidden aspect-[16/9] cursor-explore group">
-                <img src={galleryImages[3].src} alt={galleryImages[3].alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+                <img src={galleryImages[3].src} alt={galleryImages[3].alt} title="Terrazza panoramica con vista sulle montagne" loading="lazy" width={800} height={500} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
               </div>
             </div>
             <div className="col-span-12 md:col-span-4 md:-mt-4 rv-clip-left">
               <div className="overflow-hidden aspect-square cursor-explore group">
-                <img src={galleryImages[4].src} alt={galleryImages[4].alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+                <img src={galleryImages[4].src} alt={galleryImages[4].alt} title="Panorama delle Dolomiti dalla baita" loading="lazy" width={600} height={600} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
               </div>
             </div>
 
             {/* Row 3 — wide left (5 cols), gap, narrow right (3 cols, offset up), medium right-edge (4 cols, offset down) */}
             <div className="col-span-12 md:col-span-5 md:col-start-1 md:mt-6 rv-clip-up">
               <div className="img-hover-zoom overflow-hidden aspect-[16/9] cursor-explore group">
-                <img src={galleryImages[5].src} alt={galleryImages[5].alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+                <img src={galleryImages[5].src} alt={galleryImages[5].alt} title="Atmosfera accogliente degli ambienti interni" loading="lazy" width={800} height={500} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
               </div>
             </div>
             <div className="col-span-5 md:col-span-3 md:col-start-6 md:-mt-10 rv-scale">
               <div className="overflow-hidden aspect-[3/4] cursor-explore group">
-                <img src={galleryImages[6].src} alt={galleryImages[6].alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+                <img src={galleryImages[6].src} alt={galleryImages[6].alt} title="Dettaglio arredamento e decorazioni in legno" loading="lazy" width={600} height={800} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
               </div>
             </div>
             <div className="col-span-7 md:col-span-4 md:col-start-9 md:mt-14 rv-clip-right">
               <div className="img-hover-shift overflow-hidden aspect-[4/3] cursor-explore group">
-                <img src={galleryImages[7].src} alt={galleryImages[7].alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+                <img src={galleryImages[7].src} alt={galleryImages[7].alt} title="Vista panoramica dalla baita sulle vette dolomitiche" loading="lazy" width={800} height={600} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
               </div>
             </div>
           </div>

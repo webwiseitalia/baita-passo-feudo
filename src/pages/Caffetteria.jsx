@@ -68,12 +68,12 @@ export default function Caffetteria() {
   }, [])
 
   const galleryImages = [
-    { src: caff1, alt: 'Caffetteria Baita 1', aspect: 'aspect-[4/3]', colSpan: 'col-span-7 md:col-span-5' },
-    { src: caff2, alt: 'Caffetteria Baita 2', aspect: 'aspect-[3/4]', colSpan: 'col-span-5 md:col-span-3' },
-    { src: caff3, alt: 'Caffetteria Baita 3', aspect: 'aspect-[16/10]', colSpan: 'col-span-12 md:col-span-4 md:-mt-16' },
-    { src: caff4, alt: 'Caffetteria Baita 4', aspect: 'aspect-square', colSpan: 'col-span-5 md:col-span-3 md:mt-6' },
-    { src: caff5, alt: 'Caffetteria Baita 5', aspect: 'aspect-[16/9]', colSpan: 'col-span-7 md:col-span-5 md:-mt-4' },
-    { src: caff6, alt: 'Caffetteria Baita 6', aspect: 'aspect-[4/3]', colSpan: 'col-span-12 md:col-span-4 md:-mt-10' },
+    { src: caff1, alt: 'Caffetteria Baita 1', title: 'Interno della caffetteria Baita Passo Feudo', aspect: 'aspect-[4/3]', colSpan: 'col-span-7 md:col-span-5', width: 800, height: 600 },
+    { src: caff2, alt: 'Caffetteria Baita 2', title: 'Dettaglio bevande calde della caffetteria', aspect: 'aspect-[3/4]', colSpan: 'col-span-5 md:col-span-3', width: 600, height: 800 },
+    { src: caff3, alt: 'Caffetteria Baita 3', title: 'Ambiente accogliente della caffetteria alpina', aspect: 'aspect-[16/10]', colSpan: 'col-span-12 md:col-span-4 md:-mt-16', width: 800, height: 500 },
+    { src: caff4, alt: 'Caffetteria Baita 4', title: 'Preparazione del caffe espresso in montagna', aspect: 'aspect-square', colSpan: 'col-span-5 md:col-span-3 md:mt-6', width: 800, height: 800 },
+    { src: caff5, alt: 'Caffetteria Baita 5', title: 'Vista panoramica dalla caffetteria', aspect: 'aspect-[16/9]', colSpan: 'col-span-7 md:col-span-5 md:-mt-4', width: 800, height: 450 },
+    { src: caff6, alt: 'Caffetteria Baita 6', title: 'Atmosfera calda della caffetteria Baita', aspect: 'aspect-[4/3]', colSpan: 'col-span-12 md:col-span-4 md:-mt-10', width: 800, height: 600 },
   ]
 
   return (
@@ -133,6 +133,10 @@ export default function Caffetteria() {
                 <img
                   src={img.src}
                   alt={img.alt}
+                  title={img.title}
+                  loading={i === 0 ? 'eager' : 'lazy'}
+                  width={img.width}
+                  height={img.height}
                   className="w-full h-full object-cover parallax-img scale-110"
                 />
               </div>

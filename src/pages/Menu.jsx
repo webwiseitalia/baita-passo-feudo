@@ -207,6 +207,10 @@ export default function Menu() {
         <img
           src={heroImg}
           alt="Menu Baita Passo Feudo"
+          title="Il menu della cucina trentina a 2200 metri"
+          loading="eager"
+          width={1920}
+          height={1080}
           className="hero-bg absolute inset-0 w-full h-full object-cover scale-110"
         />
         <div className="hero-overlay absolute inset-0" />

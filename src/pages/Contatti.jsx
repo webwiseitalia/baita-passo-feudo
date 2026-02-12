@@ -37,6 +37,10 @@ export default function Contatti() {
         <img
           src={panorama}
           alt="Panorama Baita Passo Feudo"
+          title="Vista panoramica dalle Dolomiti a Passo Feudo"
+          loading="eager"
+          width={1920}
+          height={1080}
           className="hero-bg absolute inset-0 w-full h-full object-cover scale-105"
         />
         <div className="hero-overlay-dramatic absolute inset-0" />

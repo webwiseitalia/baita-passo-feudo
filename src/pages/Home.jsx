@@ -316,7 +316,7 @@ export default function Home() {
               {/* Image 1 — tall portrait */}
               <div className="md:col-span-3 md:col-start-4 rv-clip-up">
                 <div className="img-hover-shift overflow-hidden aspect-[3/4]">
-                  <img src={piatto2} alt="Dolci della casa" className="w-full h-full object-cover" />
+                  <img src={piatto2} alt="Dolci della casa" className="w-full h-full object-cover" title="Dolci tipici della casa come strudel e Kaiserschmarrn" loading="lazy" width={600} height={800} />
                 </div>
                 <div className="mt-3 rv-up">
                   <h3 className="font-heading text-lg text-alpine-dark">Dolci</h3>
@@ -327,7 +327,7 @@ export default function Home() {
               {/* Image 2 — landscape, pushed down slightly */}
               <div className="md:col-span-4 md:col-start-7 md:mt-10 rv-clip-up">
                 <div className="img-hover-zoom overflow-hidden aspect-[4/3]">
-                  <img src={terrazza} alt="Terrazza panoramica" className="w-full h-full object-cover" />
+                  <img src={terrazza} alt="Terrazza panoramica" className="w-full h-full object-cover" title="Terrazza panoramica con vista sulle Dolomiti" loading="lazy" width={800} height={600} />
                 </div>
                 <div className="mt-3 rv-up">
                   <h3 className="font-heading text-lg text-alpine-dark">Terrazza</h3>
@@ -338,7 +338,7 @@ export default function Home() {
               {/* Image 3 — square, fills right edge */}
               <div className="md:col-span-2 md:col-start-11 rv-clip-up">
                 <div className="img-hover-zoom overflow-hidden aspect-[3/5]">
-                  <img src={foto11} alt="Dettaglio piatto" className="w-full h-full object-cover" />
+                  <img src={foto11} alt="Dettaglio piatto" className="w-full h-full object-cover" title="Dettaglio di un piatto della pizzeria a 2200 metri" loading="lazy" width={600} height={1000} />
                 </div>
                 <div className="mt-3 rv-up">
                   <h3 className="font-heading text-lg text-alpine-dark">Pizzeria</h3>
@@ -357,6 +357,10 @@ export default function Home() {
             src={foto3}
             alt="Baita vista esterna"
             className="absolute inset-0 w-full h-full object-cover parallax-img scale-110"
+            title="Vista esterna della Baita Passo Feudo con terrazza solarium"
+            loading="lazy"
+            width={1920}
+            height={1080}
           />
           <div className="absolute inset-0 bg-black/40" />
 
@@ -437,6 +441,10 @@ export default function Home() {
                 src={isWinter ? attivita : panorama}
                 alt={isWinter ? 'Attività invernali' : 'Escursioni estive'}
                 className="w-full h-full object-cover parallax-img scale-110"
+                title={isWinter ? 'Attività invernali sulle piste dello Ski Center Latemar' : 'Escursioni estive tra le Dolomiti UNESCO'}
+                loading="lazy"
+                width={1920}
+                height={1080}
               />
             </div>
             <div className="absolute bottom-6 left-6 lg:bottom-12 lg:left-12 bg-white/10 backdrop-blur-md px-5 py-3 border border-white/20 rv-up">
@@ -469,7 +477,7 @@ export default function Home() {
               {/* Image next to the title to fill the right space */}
               <div className="hidden lg:block lg:col-span-4 lg:col-start-8 rv-clip-up">
                 <div className="overflow-hidden aspect-[16/9]">
-                  <img src={foto11} alt="Panorama dalla baita" className="w-full h-full object-cover" />
+                  <img src={foto11} alt="Panorama dalla baita" className="w-full h-full object-cover" title="Panorama mozzafiato delle Dolomiti dalla baita" loading="lazy" width={800} height={450} />
                 </div>
               </div>
             </div>
@@ -486,7 +494,7 @@ export default function Home() {
               {/* Image fragment */}
               <div className="hidden md:block md:col-span-2 md:col-start-5 rv-clip-up">
                 <div className="overflow-hidden aspect-[3/4]">
-                  <img src={foto12} alt="" className="w-full h-full object-cover" />
+                  <img src={foto12} alt="" className="w-full h-full object-cover" title="Dettaglio decorativo della baita" loading="lazy" width={600} height={800} />
                 </div>
               </div>
 
@@ -500,14 +508,14 @@ export default function Home() {
               {/* Image fragment — small, rotated */}
               <div className="hidden md:block md:col-span-2 md:col-start-11 md:mt-4 rv-scale">
                 <div className="overflow-hidden aspect-square" style={{ transform: 'rotate(3deg)' }}>
-                  <img src={foto6} alt="" className="w-full h-full object-cover" style={{ transform: 'rotate(-3deg) scale(1.15)' }} />
+                  <img src={foto6} alt="" className="w-full h-full object-cover" style={{ transform: 'rotate(-3deg) scale(1.15)' }} title="Ambiente familiare e accogliente della baita" loading="lazy" width={600} height={600} />
                 </div>
               </div>
 
               {/* Item 3 with image beside */}
               <div className="md:col-span-2 md:col-start-1 hidden md:block rv-clip-up">
                 <div className="overflow-hidden aspect-[3/4]">
-                  <img src={foto14} alt="" className="w-full h-full object-cover" />
+                  <img src={foto14} alt="" className="w-full h-full object-cover" title="Tradizione gastronomica trentina" loading="lazy" width={600} height={800} />
                 </div>
               </div>
 
@@ -528,7 +536,7 @@ export default function Home() {
               {/* Final image, right corner */}
               <div className="hidden md:block md:col-span-2 md:col-start-11 md:-mt-6 rv-clip-up">
                 <div className="overflow-hidden aspect-[4/5]">
-                  <img src={foto16} alt="" className="w-full h-full object-cover" />
+                  <img src={foto16} alt="" className="w-full h-full object-cover" title="Terrazza solarium con vista sulla Val di Fiemme" loading="lazy" width={600} height={750} />
                 </div>
               </div>
             </div>
@@ -540,16 +548,16 @@ export default function Home() {
       <section className="relative overflow-visible bg-alpine-cream">
         <div className="grid grid-cols-12 gap-0 relative">
           <div className="col-span-4 overflow-hidden h-[45vh] md:h-[70vh] rv-clip-up -ml-1">
-            <img src={foto6} alt="Dettaglio interni" className="w-full h-full object-cover parallax-img scale-110" />
+            <img src={foto6} alt="Dettaglio interni" className="w-full h-full object-cover parallax-img scale-110" title="Dettaglio degli interni caldi e accoglienti" loading="lazy" width={1920} height={1080} />
           </div>
           <div className="col-span-3 overflow-hidden h-[35vh] md:h-[55vh] rv-clip-up self-end">
-            <img src={foto7} alt="Atmosfera della baita" className="w-full h-full object-cover parallax-img scale-110" />
+            <img src={foto7} alt="Atmosfera della baita" className="w-full h-full object-cover parallax-img scale-110" title="Atmosfera calda e rustica della baita alpina" loading="lazy" width={1920} height={1080} />
           </div>
           <div className="col-span-2 overflow-hidden h-[40vh] md:h-[65vh] rv-clip-up self-start" style={{ marginTop: '-3vh' }}>
-            <img src={foto17} alt="Dettaglio arredamento" className="w-full h-full object-cover parallax-img scale-110" />
+            <img src={foto17} alt="Dettaglio arredamento" className="w-full h-full object-cover parallax-img scale-110" title="Arredamento tipico alpino in legno naturale" loading="lazy" width={1920} height={1080} />
           </div>
           <div className="col-span-3 overflow-hidden h-[30vh] md:h-[50vh] rv-clip-up self-center -mr-1">
-            <img src={foto18} alt="Vista panoramica" className="w-full h-full object-cover parallax-img scale-110" />
+            <img src={foto18} alt="Vista panoramica" className="w-full h-full object-cover parallax-img scale-110" title="Vista panoramica sulle vette delle Dolomiti" loading="lazy" width={1920} height={1080} />
           </div>
 
           <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 z-20 rv-up">

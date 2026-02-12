@@ -74,6 +74,10 @@ export default function Raggiungerci() {
         <img
           src={heroImg}
           alt="Come raggiungerci — Baita Passo Feudo"
+          title="Panorama del percorso verso Baita Passo Feudo"
+          loading="eager"
+          width={1920}
+          height={1080}
           className="hero-bg absolute inset-0 w-full h-full object-cover scale-105"
         />
         <div className="hero-overlay-left absolute inset-0" />
@@ -158,6 +162,10 @@ export default function Raggiungerci() {
                 <img
                   src={seggiovia}
                   alt="Seggiovia verso Passo Feudo"
+                  title="Seggiovia Gardone - Passo Feudo tra le Dolomiti"
+                  loading="lazy"
+                  width={600}
+                  height={800}
                   className="w-full h-full object-cover parallax-img scale-110"
                 />
               </div>
