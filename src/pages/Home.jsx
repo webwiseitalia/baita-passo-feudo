@@ -22,6 +22,7 @@ import foto12 from '../assets/foto/foto-12.webp'
 import foto14 from '../assets/foto/foto-14.webp'
 import foto16 from '../assets/foto/foto-16.webp'
 import foto18 from '../assets/foto/foto-18.webp'
+import logoDecor from '../assets/dettagli/logo.svg'
 
 export default function Home() {
   const { isWinter } = useSeason()
@@ -110,10 +111,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══════ DOUBLE MARQUEE ═══════ */}
-      <div className="py-5 bg-alpine-dark overflow-hidden space-y-2">
+      {/* ═══════ MARQUEE ═══════ */}
+      <div className="py-4 bg-alpine-dark overflow-hidden">
         <div className="marquee-track flex whitespace-nowrap">
-          {[...Array(3)].map((_, i) => (
+          {[...Array(4)].map((_, i) => (
             <span key={i} className="flex items-center gap-10 pr-10">
               <span className="label-upper text-wood-500">Ristorante</span>
               <span className="text-alpine-gold text-xs">✦</span>
@@ -127,22 +128,10 @@ export default function Home() {
               <span className="text-alpine-gold text-xs">✦</span>
               <span className="label-upper text-wood-500">Dolomiti UNESCO</span>
               <span className="text-alpine-gold text-xs">✦</span>
-            </span>
-          ))}
-        </div>
-        <div className="marquee-track-reverse flex whitespace-nowrap">
-          {[...Array(3)].map((_, i) => (
-            <span key={i} className="flex items-center gap-10 pr-10">
-              <span className="label-upper text-wood-600">Val di Fiemme</span>
-              <span className="text-wood-700 text-xs">·</span>
-              <span className="label-upper text-wood-600">Predazzo</span>
-              <span className="text-wood-700 text-xs">·</span>
-              <span className="label-upper text-wood-600">Ski Center Latemar</span>
-              <span className="text-wood-700 text-xs">·</span>
-              <span className="label-upper text-wood-600">Cucina Trentina</span>
-              <span className="text-wood-700 text-xs">·</span>
-              <span className="label-upper text-wood-600">Km Zero</span>
-              <span className="text-wood-700 text-xs">·</span>
+              <span className="label-upper text-wood-500">Val di Fiemme</span>
+              <span className="text-alpine-gold text-xs">✦</span>
+              <span className="label-upper text-wood-500">Cucina Trentina</span>
+              <span className="text-alpine-gold text-xs">✦</span>
             </span>
           ))}
         </div>
@@ -156,12 +145,17 @@ export default function Home() {
             Benvenuti
           </div>
 
+          {/* Decorative logo — dark, background effect, right of image */}
+          <div className="absolute right-[2%] top-[45%] hidden lg:block select-none pointer-events-none z-[1] parallax-x" data-direction="right">
+            <img src={logoDecor} alt="" className="w-[40vw] max-w-[700px] opacity-[0.04]" style={{ filter: 'brightness(0)' }} />
+          </div>
+
           <div className="relative z-10 max-w-[1600px] mx-auto">
             <div className="lg:ml-[8%]">
               <p className={`rv-up label-upper mb-4 ${isWinter ? 'text-winter-600' : 'text-summer-600'}`}>
                 Benvenuti
               </p>
-              <h2 className="rv-up display-large text-alpine-dark max-w-md" ref={splitRef}>
+              <h2 className="rv-up display-large text-alpine-dark whitespace-nowrap" ref={splitRef}>
                 <span className="split-headline">In alta quota</span>
               </h2>
             </div>
